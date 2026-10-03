@@ -1,0 +1,541 @@
+.knowledge-container {
+  min-height: 100vh;
+  padding: 30px 7%;
+  background: #0b0b0f;
+  color: white;
+}
+
+/* ================= HEADER ================= */
+
+.knowledge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.knowledge-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.knowledge-header p {
+  margin: 5px 0 0;
+  opacity: 0.65;
+}
+
+.knowledge-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.back-dashboard-btn,
+.logout-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-dashboard-btn:hover,
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ================= HERO ================= */
+
+.knowledge-hero {
+  padding: 45px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  margin-bottom: 25px;
+}
+
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.hero-content h2 {
+  max-width: 700px;
+  margin: 15px 0;
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.hero-content p {
+  max-width: 650px;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+/* ================= ROLE SUMMARY ================= */
+
+.role-summary {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.role-card,
+.readiness-card {
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.role-card > span,
+.readiness-card > span {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.role-card h2 {
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+.role-card p {
+  margin: 0;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.readiness-card strong {
+  display: block;
+  margin: 10px 0 15px;
+  font-size: 34px;
+}
+
+/* ================= PROGRESS ================= */
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: white;
+  transition: width 0.5s ease;
+}
+
+/* ================= LEARNING STATS ================= */
+
+.learning-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.learning-stat {
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.learning-stat strong {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.learning-stat span {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading > span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.55;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.section-heading p {
+  margin: 0;
+  opacity: 0.65;
+}
+
+/* ================= LEARNING PATH ================= */
+
+.learning-path {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.learning-step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  position: relative;
+}
+
+/* ================= SELECTED SKILL ================= */
+
+.selected-learning-step {
+  scroll-margin-top: 30px;
+}
+
+.selected-learning-step .step-content {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.step-number {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+}
+
+.selected-learning-step .step-number {
+  background: white;
+  color: #0b0b0f;
+  border-color: white;
+}
+
+/* ================= STEP CONTENT ================= */
+
+.step-content {
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  transition: 0.25s ease;
+}
+
+.step-content:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ================= STEP HEADER ================= */
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.skill-category {
+  font-size: 12px;
+  letter-spacing: 1px;
+  opacity: 0.55;
+  text-transform: uppercase;
+}
+
+.step-header h3 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
+.step-header p {
+  margin: 0;
+  opacity: 0.6;
+}
+
+/* ================= IMPORTANCE ================= */
+
+.importance {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.importance.required {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.importance.preferred {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.7;
+}
+
+/* ================= SELECTED SKILL BANNER ================= */
+
+.selected-skill-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.selected-skill-banner > span {
+  font-size: 18px;
+}
+
+.selected-skill-banner strong {
+  display: block;
+  font-size: 13px;
+}
+
+.selected-skill-banner p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* ================= RESOURCE LIST ================= */
+
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ================= RESOURCE CARD ================= */
+
+.resource-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
+  transition: 0.2s ease;
+}
+
+.resource-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.resource-info {
+  flex: 1;
+}
+
+.resource-type {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+.resource-info h4 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.resource-info p {
+  margin: 0 0 12px;
+  opacity: 0.6;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.resource-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* ================= DEFAULT CAREEROS LEARNING CARD ================= */
+
+.default-learning-card {
+  border-color: rgba(255, 255, 255, 0.14);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.025)
+    );
+}
+
+.default-learning-card .resource-type {
+  opacity: 0.75;
+}
+
+.default-learning-card .resource-info h4 {
+  font-size: 20px;
+}
+
+.default-learning-card .resource-info p strong {
+  color: white;
+}
+
+/* ================= START LEARNING BUTTON ================= */
+
+.resource-btn {
+  flex-shrink: 0;
+  padding: 11px 17px;
+  border-radius: 9px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.resource-btn:hover {
+  background: white;
+  color: #0b0b0f;
+  border-color: white;
+  transform: translateX(2px);
+}
+
+/* ================= COMPLETE ================= */
+
+.complete-card {
+  padding: 50px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.complete-icon {
+  font-size: 45px;
+}
+
+.complete-card h2 {
+  margin: 15px 0 8px;
+}
+
+.complete-card p {
+  margin: 0;
+  opacity: 0.65;
+}
+
+/* ================= LOADING ================= */
+
+.knowledge-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  opacity: 0.7;
+}
+
+.knowledge-loading p {
+  margin: 0;
+}
+
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: knowledge-spin 0.8s linear infinite;
+}
+
+@keyframes knowledge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= ERROR ================= */
+
+.knowledge-error {
+  padding: 50px;
+  text-align: center;
+  color: #ff6b6b;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+  .knowledge-container {
+    padding: 25px 5%;
+  }
+
+  .knowledge-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .knowledge-actions {
+    flex-direction: column;
+  }
+
+  .hero-content h2 {
+    font-size: 30px;
+  }
+
+  .role-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-step {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+
+  .step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .step-content {
+    padding: 18px;
+  }
+
+  .step-header {
+    flex-direction: column;
+  }
+
+  .resource-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resource-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

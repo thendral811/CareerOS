@@ -1,0 +1,258 @@
+.custom-dropdown-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+/*
+  When this particular dropdown is open,
+  place it above nearby form elements.
+*/
+.custom-dropdown-wrapper-open {
+  z-index: 10000;
+}
+
+.custom-dropdown-label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.custom-dropdown-button {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 0.8rem 1rem;
+
+  background: rgb(2, 22, 36);
+  color: #ffffff;
+
+  border: 1px solid #00c1d5;
+  border-radius: 6px;
+
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.custom-dropdown-button:hover {
+  background: rgb(3, 30, 46);
+
+  box-shadow:
+    0 0 12px rgba(0, 193, 213, 0.25);
+}
+
+.custom-dropdown-open {
+  box-shadow:
+    0 0 16px rgba(0, 193, 213, 0.35);
+}
+
+.custom-dropdown-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.custom-dropdown-disabled:hover {
+  background: rgb(2, 22, 36);
+  box-shadow: none;
+}
+
+.custom-dropdown-arrow {
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.custom-dropdown-open
+.custom-dropdown-arrow {
+  color: #00c1d5;
+}
+
+.custom-dropdown-arrow-open {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   DROPDOWN MENU
+   ========================================= */
+
+.custom-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  bottom: auto;
+
+  left: 0;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: rgb(2, 22, 36);
+
+  border: 1px solid #00c1d5;
+  border-radius: 6px;
+
+  padding: 7px 0;
+
+  /*
+    Don't allow a long list to extend
+    beyond the viewport.
+  */
+  max-height: min(
+    280px,
+    calc(100vh - 120px)
+  );
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 100000;
+
+  opacity: 0;
+
+  transform: translateY(-8px);
+
+  pointer-events: none;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.custom-dropdown-menu-open {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: auto;
+
+  visibility: visible;
+}
+
+/*
+  OPEN UPWARD
+
+  Used automatically when the dropdown
+  is close to the bottom of the screen.
+*/
+.custom-dropdown-menu-upward {
+  top: auto;
+  bottom: calc(100% + 8px);
+
+  transform: translateY(8px);
+}
+
+.custom-dropdown-menu-upward.custom-dropdown-menu-open {
+  transform: translateY(0);
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+.custom-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #3b5963;
+  border-radius: 10px;
+}
+
+.custom-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #00c1d5;
+}
+
+/* =========================================
+   OPTIONS
+   ========================================= */
+
+.custom-dropdown-option {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0.75rem 1rem;
+
+  background: transparent;
+  color: #ffffff;
+
+  border: none;
+
+  font-size: 0.8rem;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.custom-dropdown-option:hover {
+  background: rgba(0, 193, 213, 0.12);
+
+  color: #00c1d5;
+
+  padding-left: 1.25rem;
+}
+
+.custom-dropdown-option-selected {
+  color: #00c1d5;
+
+  background: rgba(0, 193, 213, 0.08);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+  .custom-dropdown-button {
+    min-height: 46px;
+  }
+
+  .custom-dropdown-option {
+    padding: 0.8rem 1rem;
+  }
+
+  .custom-dropdown-menu {
+    max-height: 240px;
+  }
+}

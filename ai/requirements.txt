@@ -1,0 +1,7 @@
+pdfplumber
+pypdf
+PyPDF2
+spacy
+scikit-learn
+pandas
+numpy

@@ -1,0 +1,469 @@
+/* ==============================
+   LOGIN PAGE RESET
+================================ */
+
+.login-page,
+.login-page * {
+  box-sizing: border-box;
+}
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: #fffef8;
+
+  background-image: linear-gradient(
+    transparent 1.15rem,
+    #cccccc 1.2rem
+  );
+
+  background-size: 100% 1.2rem;
+
+  font-family: cursive;
+  color: #111;
+
+  overflow-x: hidden;
+
+  position: relative;
+}
+
+
+/* ==============================
+   RED NOTEBOOK MARGIN
+================================ */
+
+.login-page::before {
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: clamp(45px, 8vw, 120px);
+
+  width: 1px;
+  height: 100vh;
+
+  background: #d88;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+================================ */
+
+.login-page .login-container {
+  position: relative;
+
+  z-index: 1;
+
+  min-height: 100vh;
+  width: 100%;
+
+  padding-top: clamp(50px, 8vh, 100px);
+  padding-right: clamp(25px, 10vw, 150px);
+  padding-bottom: 80px;
+  padding-left: clamp(80px, 14vw, 180px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* ==============================
+   CAREEROS TITLE
+================================ */
+
+.login-page .login-title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  cursor: default;
+
+  letter-spacing: 3px;
+
+  font-size: clamp(2.8rem, 6vw, 5rem);
+
+  font-family: cursive;
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1.5px rgba(20, 20, 20, 0.55);
+
+  width: fit-content;
+
+  line-height: 1.2;
+}
+
+
+/* ==============================
+   DESCRIPTION
+================================ */
+
+.login-page .login-description {
+  max-width: 700px;
+
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+
+  color: #222;
+}
+
+
+/* ==============================
+   LOGIN BOX
+================================ */
+
+.login-page .login-box {
+  width: min(100%, 430px);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* ==============================
+   LOGIN HEADING
+================================ */
+
+.login-page .login-box h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+
+  margin-bottom: 8px;
+
+  font-family: cursive;
+
+  color: #111;
+}
+
+
+/* ==============================
+   FORM
+================================ */
+
+.login-page .login-box form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+/* ==============================
+   INPUT GROUP
+================================ */
+
+.login-page .login-input-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* ==============================
+   INPUTS
+================================ */
+
+.login-page .login-box input {
+  width: 100%;
+
+  padding: 12px 4px;
+
+  border: none;
+
+  border-bottom: 2px solid #555;
+
+  background: transparent;
+
+  outline: none;
+
+  font-family: cursive;
+
+  font-size: 1.1rem;
+
+  color: #111;
+
+  transition: border-color 0.2s ease;
+}
+
+
+.login-page .login-box input::placeholder {
+  color: #666;
+}
+
+
+.login-page .login-box input:focus {
+  border-bottom: 2px solid #111;
+}
+
+
+/* ==============================
+   INVALID INPUT
+================================ */
+
+.login-page .login-box input.input-error {
+  border-bottom: 2px solid #c62828;
+}
+
+
+/* ==============================
+   ERROR MESSAGE
+================================ */
+
+.login-page .login-error-message {
+  font-family: cursive;
+
+  font-size: 0.9rem;
+
+  color: #c62828;
+
+  line-height: 1.3;
+}
+
+
+/* ==============================
+   FORGOT PASSWORD
+================================ */
+
+.login-page .login-forgot {
+  width: fit-content;
+
+  margin-top: -5px;
+
+  font-family: cursive;
+
+  font-size: 0.95rem;
+
+  color: #333;
+
+  text-decoration: underline;
+
+  transition: color 0.2s ease;
+}
+
+
+.login-page .login-forgot:hover {
+  color: #000;
+}
+
+
+/* ==============================
+   LOGIN BUTTON
+================================ */
+
+.login-page .login-btn {
+  width: 100%;
+
+  padding: 13px 20px;
+
+  margin-top: 5px;
+
+  border: 2px solid #111;
+
+  background: #111;
+
+  color: #fffef8;
+
+  font-family: cursive;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+.login-page .login-btn:hover {
+  background: transparent;
+
+  color: #111;
+}
+
+
+/* ==============================
+   REGISTER TEXT
+================================ */
+
+.login-page .login-register {
+  margin-top: 5px;
+
+  font-size: 1rem;
+
+  font-family: cursive;
+
+  color: #333;
+}
+
+
+.login-page .login-register a {
+  color: #111;
+
+  font-weight: bold;
+
+  text-decoration: underline;
+}
+
+
+.login-page .login-register a:hover {
+  color: #555;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+
+  .login-page .login-container {
+    padding-top: 60px;
+
+    padding-right: 40px;
+
+    padding-bottom: 60px;
+
+    padding-left: 90px;
+
+    justify-content: flex-start;
+  }
+
+
+  .login-page .login-description {
+    max-width: 600px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+  }
+
+
+  .login-page .login-box {
+    max-width: 400px;
+  }
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  .login-page::before {
+    left: 35px;
+  }
+
+
+  .login-page .login-container {
+    padding-top: 50px;
+
+    padding-right: 25px;
+
+    padding-bottom: 50px;
+
+    padding-left: 55px;
+  }
+
+
+  .login-page .login-title {
+    font-size: 2.8rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .login-page .login-description {
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+
+    margin-bottom: 30px;
+  }
+
+
+  .login-page .login-box {
+    width: 100%;
+  }
+
+
+  .login-page .login-box h2 {
+    font-size: 1.8rem;
+  }
+
+
+  .login-page .login-box input {
+    font-size: 1rem;
+  }
+
+
+  .login-page .login-btn {
+    font-size: 1rem;
+  }
+
+
+  .login-page .login-error-message {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+
+  .login-page::before {
+    left: 28px;
+  }
+
+
+  .login-page .login-container {
+    padding-left: 45px;
+
+    padding-right: 20px;
+  }
+
+
+  .login-page .login-title {
+    font-size: 2.4rem;
+  }
+
+
+  .login-page .login-description {
+    font-size: 0.9rem;
+  }
+
+
+  .login-page .login-register {
+    font-size: 0.9rem;
+  }
+}
